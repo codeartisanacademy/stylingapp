@@ -15,6 +15,10 @@ export const baseStyle = {
         height:160,
         marginBottom:15,
     },
+    imageBig:{
+        width:300,
+        height:360,
+    },
     boxProductSmall:{
         width:120,
         marginRight: margin.md,
@@ -44,6 +48,19 @@ export const baseStyle = {
     },
     strikeThrough:{
         textDecorationLine:"line-through"
+    },
+    line:{
+        marginHorizontal:margin.lg,
+        borderBottomColor: '#666666',
+        borderBottomWidth:1,
+        marginVertical:margin.lg,
+    },
+    column:{
+        flexDirection:"row",
+        width:'50%',
+    },
+    textRight:{
+        textAlign:'right',
     }
 
 
