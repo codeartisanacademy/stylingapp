@@ -15,6 +15,16 @@ export const baseStyle = {
         height:160,
         marginBottom:15,
     },
+    imageThumbnail:{
+        width:80,
+        height:100,
+        marginBottom:15,
+    },
+    imageThumbnailSm:{
+        width:50,
+        height:60,
+        marginBottom:15,
+    },
     imageBig:{
         width:300,
         height:360,
@@ -61,8 +71,21 @@ export const baseStyle = {
     },
     textRight:{
         textAlign:'right',
+    },
+    buttonStyle:{
+        borderWidth:1,
+        borderColor:color.secondary,
+        paddingHorizontal:padding.lg,
+        paddingVertical:padding.md,
+        flexDirection:'row',
+        justifyContent:'center',
+        width:160,
+        alignSelf:'center'
+    },
+    bigNumber:{
+        fontSize:30,
+        fontWeight:"bold",
     }
-
 
 }
 
