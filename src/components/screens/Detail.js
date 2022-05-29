@@ -1,4 +1,4 @@
-import { View, Text, TouchableOpacity } from 'react-native'
+import { View, Text, TouchableOpacity, ScrollView, Image } from 'react-native'
 import React, {useState} from 'react'
 import { SliderBox } from "react-native-image-slider-box";
 import { baseStyle } from '../../styles/style';
@@ -16,7 +16,7 @@ const Detail = () => {
   ]
 
   return (
-    <View>
+    <ScrollView>
       <SliderBox images={images} sliderBoxHeight={400} />
       <View style={[baseStyle.container, baseStyle.colView]}>
           <View style={{width:'90%'}}>
@@ -49,11 +49,31 @@ const Detail = () => {
                   }
                 ]
               }
+              
             />
+            <TouchableOpacity style={[{marginTop:10, backgroundColor:'black', padding:10}]}>
+              <Text style={{color:'white', alignSelf:'center', fontSize:18}}>Visit</Text>
+            </TouchableOpacity>
           </View>
       </View>
-
-    </View>
+      <View style={[baseStyle.container]}>
+              <Text style={baseStyle.titleText}>SHOP SIMILAR</Text>
+              <View style={baseStyle.colView}>
+                <View style={{width:'50%', backgroundColor:'white', borderRightWidth:1, borderRightColor:'#cecece', padding:10}}>
+                    <Image source={{uri:'https://cdna.lystit.com/200/250/tr/photos/tessabit/cdf07910/nike--Air-Max-95-Kj-Sneakers.jpeg'}} style={{width:'98%', 'height':160, 'marginBottom':10}} />
+                    <Text style={baseStyle.productTitle}>NIKE</Text>
+                    <Text>Air Max Dawn</Text>
+                    <Text>$129</Text>
+                </View>
+                <View style={{width:'50%', backgroundColor:'white',padding:10}}>
+                  <Image source={{uri:'https://cdna.lystit.com/200/250/tr/photos/tessabit/cdf07910/nike--Air-Max-95-Kj-Sneakers.jpeg'}} style={{width:'98%', 'height':160, 'marginBottom':10}} />
+                      <Text style={baseStyle.productTitle}>NIKE</Text>
+                      <Text>Air Max Dawn</Text>
+                      <Text>$129</Text>
+                </View>
+              </View>
+      </View>
+    </ScrollView>
   )
 }
 
